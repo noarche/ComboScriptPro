@@ -1,3 +1,8 @@
+Updates: 
+
+v2.6.1 - ignores case on for domain when extracting and analysis
+
+
 
         print("Option 1; To extract all lines for earthlink.net enter @earthlink.net | If you want to extract all .net domains enter .net | This will create text documents named what you enter | When extracting lines are appended and never overwrite.")
        
