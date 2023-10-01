@@ -1,7 +1,7 @@
 # ComboScriptPro
 Manipulate Email:Pass combo, All in one tool. 
 
-![screenshot](https://github.com/noarche/ComboScriptPro/blob/main/20230925_154947.jpg?raw=true)
+![screenshot]([https://github.com/noarche/ComboScriptPro/blob/main/20230925_154947.jpg?raw=true](https://raw.githubusercontent.com/noarche/ComboScriptPro/main/20231001_063946.jpg))
 # Updates: 
 v2.6.1 - ignores case on for domain when extracting and analysis
 
