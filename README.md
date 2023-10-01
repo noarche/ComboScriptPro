@@ -1,13 +1,16 @@
 # ComboScriptPro
 Manipulate Email:Pass combo, All in one tool. 
+\n
+![screenshot](https://github.com/noarche/ComboScriptPro/blob/main/20231001_063946.jpg?raw=true)
 
-![screenshot]([https://github.com/noarche/ComboScriptPro/blob/main/20230925_154947.jpg?raw=true](https://raw.githubusercontent.com/noarche/ComboScriptPro/main/20231001_063946.jpg))
+\n
+\n
 # Updates: 
-v2.6.1 - ignores case on for domain when extracting and analysis
+\nv2.6.1 - ignores case on for domain when extracting and analysis
 
-
+\n
 # About
-A GUI for this script that allows you to copy paste instad of reading from input output by using text boxes can be found here: https://github.com/noarche/ComboToolPro-GUI
+\nA GUI for this script that allows you to copy paste instad of reading from input output by using text boxes can be found here: https://github.com/noarche/ComboToolPro-GUI
 
         print("Option 1; To extract all lines for earthlink.net enter @earthlink.net | If you want to extract all .net domains enter .net | This will create text documents named what you enter | When extracting lines are appended and never overwrite.")
        
