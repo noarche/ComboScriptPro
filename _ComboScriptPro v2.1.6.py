@@ -207,7 +207,7 @@ def main():
         print("Option 0; Exit")
         print("\n")
         print("\n")
-        print("\nCreated by noarch | T.me/noarchDrops")
+        print("\nhttps://github.com/noarche ")
         print("ComboScriptPro v2 | Build Date September 18 2023")
         print("\nChoose a task:")
         print("1. Extract lines by specific domain")
