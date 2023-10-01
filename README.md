@@ -12,8 +12,7 @@ v2.6.1 - ignores case on for domain when extracting and analysis
 # About
 A GUI for this script that allows you to copy paste instad of reading from input output by using text boxes can be found here: https://github.com/noarche/ComboToolPro-GUI
 
-\n
-\n
+
 [![noarche's GitHub stats](https://github-readme-stats.vercel.app/api?username=noarche)](https://github.com/noarche/github-readme-stats)
 
 
