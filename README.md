@@ -42,4 +42,17 @@ Drop a tip
     (LTC) address ltc1qu7ze2hlnkh440k37nrm4nhpv2dre7fl8xu0egx
 
 
+
 ![noarche's GitHub stats](https://github-readme-stats.vercel.app/api?username=noarche&show_icons=true&theme=transparent)
+
+
+# Need Proxylist?
+
+Check out my proxylist repo for free API links. 
+
+https://github.com/noarche/proxylist-socks5-sock4-exported-updates
+
+# Want the script version of this app?
+
+[https://github.com/noarche/proxylist-socks5-sock4-exported-updates](https://github.com/noarche/ComboScriptPro)
+
