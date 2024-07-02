@@ -52,7 +52,7 @@ Check out my proxylist repo for free API links.
 
 https://github.com/noarche/proxylist-socks5-sock4-exported-updates
 
-# Want the script version of this app?
+# Want the GUI version of this app?
 
-[https://github.com/noarche/proxylist-socks5-sock4-exported-updates](https://github.com/noarche/ComboScriptPro)
+https://github.com/noarche/ComboToolPro-GUI
 
