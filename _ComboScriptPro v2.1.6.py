@@ -7,18 +7,17 @@ def read_input_file():
         return f.readlines()
 
 def append_to_file(filename, lines):
-    with open(filename, 'a') as f:
+    with open(filename, 'a', encoding='utf-8') as f:
         f.writelines(lines)
 
 def write_to_file(filename, lines):
-    with open(filename, 'w') as f:
+    with open(filename, 'w', encoding='utf-8') as f:
         f.writelines(lines)
 
 def extract_specific_text():
     lines = read_input_file()
     text_to_find = input("Enter the text you want to extract: ").lower()
 
-    
     if not os.path.exists("extractedDomains"):
         os.makedirs("extractedDomains")
 
@@ -71,7 +70,7 @@ def combine_files():
     files = os.listdir('toCombine')
     combined_content = []
     for filename in tqdm(files, desc="Computing..."):
-        with open(os.path.join('toCombine', filename), 'r') as f:
+        with open(os.path.join('toCombine', filename), 'r', encoding='utf-8') as f:
             combined_content.extend(f.readlines())
     write_to_file('output.txt', combined_content)
 
@@ -85,11 +84,11 @@ def split_by_lines():
         
     for index in tqdm(range(0, len(lines), lines_per_file), desc="Computing..."):
         chunk = lines[index:index + lines_per_file]
-        with open(os.path.join(filename, f'{filename}_{index // lines_per_file}.txt'), 'w') as f:
+        with open(os.path.join(filename, f'{filename}_{index // lines_per_file}.txt'), 'w', encoding='utf-8') as f:
             f.writelines(chunk)
 
 def join_lines():
-    with open('extracted_emails.txt', 'r') as e, open('extracted_passwords.txt', 'r') as p:
+    with open('extracted_emails.txt', 'r', encoding='utf-8') as e, open('extracted_passwords.txt', 'r', encoding='utf-8') as p:
         emails = e.readlines()
         passwords = p.readlines()
     joined_output = [f'{email.strip()}:{password.strip()}\n' for email, password in zip(emails, passwords)]
@@ -100,7 +99,7 @@ def extract_text_around_colon():
     pattern = r'\S+:\S+'  # This matches non-space characters before and after the colon
     extracted_lines = [re.search(pattern, line).group(0) + '\n' for line in lines if re.search(pattern, line)]
     append_to_file('cleanedOutput.txt', extracted_lines)
-    
+
 def extract_and_save_domain_specific_text():
     lines = read_input_file()
     domain_to_lines_map = {}
@@ -185,7 +184,6 @@ def display_general_domain_statistics():
         if user_input.lower() != 'y':
             break
 
-    
 def main():
     while True:
         print("\nThe information and/or software provided here is intended solely for educational purposes and legal penetration testing purposes. By accessing or using this information and/or software, you acknowledge and agree that you assume full responsibility for your actions and any consequences that may result from those actions. The creators, contributors, and providers of this information and/or software shall not be held liable for any misuse or damage arising from its application. It is your responsibility to ensure that your use complies with all applicable laws and regulations.")
@@ -265,3 +263,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
