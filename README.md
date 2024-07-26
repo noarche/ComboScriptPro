@@ -15,7 +15,7 @@ a whole or just parts of it are being used.
 
 # ComboScriptPro
 
-Manipulate Email:Pass combo, All in one tool. 
+Manipulate Email:Pass combo, All in one tool. This script is very fast! Organize 1m+ lines a second.
 
 ![screenshot](https://github.com/noarche/ComboScriptPro/blob/main/20231001_063946.jpg?raw=true)
 
