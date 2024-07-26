@@ -24,7 +24,7 @@ Manipulate Email:Pass combo, All in one tool.
 # Updates: 
 v2.6.1 - ignores case on for domain when extracting and analysis
 
-July 26th update| Use the python script, I have fixed it but if you want .exe version just use the GUI edition. 
+If you want .exe version just use the [GUI](https://github.com/noarche/ComboToolPro-GUI) edition. 
 
 
 # About
