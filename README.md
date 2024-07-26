@@ -24,7 +24,7 @@ Manipulate Email:Pass combo, All in one tool. This script is very fast! Organize
 # Updates: 
 v2.6.1 - ignores case on for domain when extracting and analysis
 
-If you want .exe version just use the [GUI](https://github.com/noarche/ComboToolPro-GUI) edition. 
+
 
 
 # About
