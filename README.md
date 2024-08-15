@@ -17,7 +17,8 @@ a whole or just parts of it are being used.
 
 Manipulate Email:Pass combo, All in one tool. This script is very fast! Organize 1m+ lines a second.
 
-![screenshot](https://github.com/noarche/ComboScriptPro/blob/main/20231001_063946.jpg?raw=true)
+![20231001_063946](https://github.com/user-attachments/assets/f57630cd-f35a-494c-a7d9-148b5fa61fd2)
+
 
 
 
