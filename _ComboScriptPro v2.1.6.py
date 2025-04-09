@@ -28,7 +28,10 @@ import re
 from tqdm import tqdm
 
 def read_input_file():
-    with open('input.txt', 'r', encoding='utf-8') as f:
+    input_path = input("Enter the input file path (leave blank for 'input.txt'): ").strip()
+    if not input_path:
+        input_path = 'input.txt'
+    with open(input_path, 'r', encoding='utf-8') as f:
         return f.readlines()
 
 def append_to_file(filename, lines):
@@ -59,11 +62,12 @@ def extract_emails():
     lines = read_input_file()
     pattern = r'[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}'
     emails = re.findall(pattern, ''.join(lines), re.IGNORECASE)
-    write_to_file('extracted_emails.txt', emails)
+    emails_with_newlines = [email + '\n' for email in emails]
+    write_to_file('extracted_emails.txt', emails_with_newlines)
 
 def extract_passwords():
     lines = read_input_file()
-    passwords = [line.split(":")[1].strip() if ':' in line else None for line in lines]
+    passwords = [line.split(":")[1].strip() + '\n' if ':' in line else None for line in lines]
     passwords = list(filter(None, passwords))
     write_to_file('extracted_passwords.txt', passwords)
 
@@ -130,7 +134,7 @@ def extract_and_save_domain_specific_text():
     domain_to_lines_map = {}
 
     for line in lines:
-        match = re.search(r'@(\w+)\.net', line, re.IGNORECASE)    
+        match = re.search(r'@(\w+)\.\w+', line, re.IGNORECASE)  # Updated regex to match all domains
         if match:
             domain = match.group(1)
             if domain not in domain_to_lines_map:
@@ -229,27 +233,6 @@ def main():
         print("Option 14; Analyze input.txt and display Top Domains, Number of lines, and the % of combo | Only .net domains")
         print("Option 15; Analyze input.txt and display Top Domains, Number of lines, and the % of combo | All domains")
         print("Option 0; Exit")
-        print("\n")
-        print("\n")
-        print("\nhttps://github.com/noarche/ComboScriptPro/ ")
-        print("ComboScriptPro v2.1.6 | Build Date June 20 2024")
-        print("\nChoose a task:")
-        print("1. Extract lines by specific domain")
-        print("2. Remove duplicate lines")
-        print("3. Extract/Split email addresses")
-        print("4. Extract/Split passwords")
-        print("5. Extract URLs")
-        print("6. Organize lines alphabetically")
-        print("7. Create directory named as each line")
-        print("8. Extract lines with MD5 hashed password")
-        print("9. Combine all text files from 'toCombine' directory")
-        print("10. Split by user-defined number of lines")
-        print("11. Join lines from extracted_emails.txt and extracted_passwords.txt")
-        print("12. Extract combo from hits with capture")
-        print("13. AutoExtract and organize all .net domains by domain")
-        print("14. Display Combo Statistics [.net Domains]")
-        print("15. Display Combo Statistics [All Domains]")
-        print("0. Exit")
         
         choice = int(input("Enter your choice: "))
         
@@ -288,29 +271,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-# Disclaimer:
-# This code/script/application/program is solely for educational and learning purposes.
-# All information, datasets, images, code, and materials are presented in good faith and
-# intended for instructive use. However, noarche make no representation or warranty, 
-# express or implied, regarding the accuracy, adequacy, validity, reliability, availability,
-# or completeness of any data or associated materials.
-# Under no circumstance shall noarche have any liability to you for any loss, damage, or 
-# misinterpretation arising due to the use of or reliance on the provided data. Your utilization
-# of the code and your interpretations thereof are undertaken at your own discretion and risk.
-#
-# By executing script/code/application, the user acknowledges and agrees that they have read, 
-# understood, and accepted the terms and conditions (or any other relevant documentation or 
-#policy) as provided by noarche.
-#
-#Visit https://github.com/noarche for more information. 
-#
-#  _.··._.·°°°·.°·..·°¯°·._.··._.·°¯°·.·° .·°°°°·.·°·._.··._
-# ███╗   ██╗ ██████╗  █████╗ ██████╗  ██████╗██╗  ██╗███████╗
-# ████╗  ██║██╔═══██╗██╔══██╗██╔══██╗██╔════╝██║  ██║██╔════╝
-# ██╔██╗ ██║██║   ██║███████║██████╔╝██║     ███████║█████╗  
-# ██║╚██╗██║██║   ██║██╔══██║██╔══██╗██║     ██╔══██║██╔══╝  
-# ██║ ╚████║╚██████╔╝██║  ██║██║  ██║╚██████╗██║  ██║███████╗
-# ╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝╚══════╝
-# °°°·._.··._.·°°°·.°·..·°¯°··°¯°·.·°.·°°°°·.·°·._.··._.·°°°
